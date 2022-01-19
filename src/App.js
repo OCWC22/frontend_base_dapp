@@ -25,6 +25,7 @@ function App() {
   return (
     <s.Screen>
       {blockchain.account === "" || blockchain.smartContract === null ? (
+        //ai = aligned centers; jc = justified content
         <s.Container flex={1} ai={"center"} jc={"center"}>
           <s.TextTitle>Connect to the Blockchain</s.TextTitle>
           <s.SpacerSmall />
