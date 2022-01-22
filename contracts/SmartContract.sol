@@ -48,6 +48,7 @@ contract SmartContract is ERC721, Ownable {
     function mint(address recipient, string memory uri) public returns(uint256) {
         uint256 newId = _tokenIds.current();
         _mint(recipient, newId);
+        //increment citical or it will try to remint existing nft and error
         _tokenIds.increment();
         _setTokenURI(newId, uri);
         return newId;
